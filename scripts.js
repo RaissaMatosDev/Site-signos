@@ -20,8 +20,11 @@ function getZodiacSign() {
         const xmlDoc = parser.parseFromString(xmlText, "application/xml");
   
         // Encontrar o signo no XML
-        const signElement = xmlDoc.querySelector(`signo[nome="${zodiacSign}"]`);
-        const description = signElement ? signElement.querySelector("descricao").textContent : "Descrição não encontrada.";
+    const signElement = xmlDoc.querySelector(`signo[nome="${zodiacSign}"]`);
+
+    const description = signElement
+    ? signElement.querySelector("descricao")?.textContent.trim()
+    : "Descrição não encontrada.";
   
         // Atualizar o conteúdo da descrição no HTML
         document.getElementById('sign-description').textContent = description;
