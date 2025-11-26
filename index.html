@@ -1,0 +1,49 @@
+<<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descubra seu Signo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="content-box">
+      <header>
+        <h1>Descubra seu Signo</h1>
+      </header>
+
+      <main>
+        <section class="input-section">
+          <label for="birthdate">Digite sua data de nascimento:</label>
+          <input type="date" id="birthdate">
+          <button onclick="getZodiacSign()">Descubra</button>
+        </section>
+
+        
+        <div id="result">
+
+        </div>
+
+        <!-- Ícones dos signos -->
+        <section class="zodiac-icons">
+          <div class="icon" data-sign="Áries">♈</div>
+          <div class="icon" data-sign="Touro">♉</div>
+          <div class="icon" data-sign="Gêmeos">♊</div>
+          <div class="icon" data-sign="Câncer">♋</div>
+          <div class="icon" data-sign="Leão">♌</div>
+          <div class="icon" data-sign="Virgem">♍</div>
+          <div class="icon" data-sign="Libra">♎</div>
+          <div class="icon" data-sign="Escorpião">♏</div>
+          <div class="icon" data-sign="Sagitário">♐</div>
+          <div class="icon" data-sign="Capricórnio">♑</div>
+          <div class="icon" data-sign="Aquário">♒</div>
+          <div class="icon" data-sign="Peixes">♓</div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

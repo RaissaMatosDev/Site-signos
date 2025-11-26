@@ -1,0 +1,79 @@
+<signos>
+  <signo nome="Áries">
+    <descricao> Conhecido por sua energia e impulso, Áries é o pioneiro, afinal, 
+    é o primeiro signo do zodíaco. Em diferentes casas, Áries traz iniciativa e 
+    coragem para os aspectos de vida representados por essas casas. Só não
+    confunda a vitalidade ariana com agressividade. 
+</descricao>
+  </signo>
+  <signo nome="Touro">
+    <descricao>O signo da estabilidade, paciência e prazer sensorial.
+    Em diferentes casas, Touro busca segurança e conforto nos temas da casa.
+    Além disso, o signo tem enorme vocação para os prazeres da vida,
+    por isso a fama da gula e da preguiça. Mas, na verdade,
+    eles guardam sua energia para ir atrás daquilo que realmente querem.
+</descricao>
+  </signo>
+  <signo nome="Gêmeos">
+    <descricao>GGêmeos traz curiosidade, adaptabilidade e habilidade de comunicação.
+    Em diferentes casas, Gêmeos estimula a troca de ideias e a aprendizagem. 
+    Acima de tudo, conhecer novas pessoas e manter longos papos. 
+    Apesar de preferirem conversas leves, são pessoas muito inteligentes.
+</descricao>
+  </signo>
+  <signo nome="Câncer">
+    <descricao>Signo do cuidado, emoção e lar, sim, mas Câncer é muito mais do que sensibilidade e família.
+    Câncer é um signo com muita ambição, embora não seja sempre visível. Sua presença em diferentes casas 
+    indica uma abordagem protetora e emocional. 
+</descricao>
+  </signo>
+  <signo nome="Leão">
+    <descricao>Leão representa criatividade, orgulho e generosidade. Regido pelo Astro Rei, também é o Rei da Selva.
+    Por isso, pode se tornar o centro das atenções, fazendo com que aqueles que estão em sua presença se sintam especiais.
+    Em diferentes casas, Leão busca expressão e reconhecimento. 
+</descricao>
+  </signo>
+  <signo nome="Virgem">
+    <descricao>Signo da análise, serviço e purificação, Virgem indica em que área da vida temos uma abordagem mais prática,
+    crítica e perfeccionista. Além disso, a ideia de controle, seja das emoções, do conhecimento ou do corpo, 
+    está muito ligada ao signo de Virgem.
+</descricao>
+  </signo>
+  <signo nome="Libra">
+    <descricao>Libra simboliza harmonia, beleza e parcerias. Gentileza e conciliação são os dons desse signo, e, por isso, 
+    se esforça muito para manter a paz. Em diferentes casas, mostra onde buscamos equilíbrio e justiça. 
+    Em compensação, a dúvida e a indecisão podem ser constantes.
+</descricao>
+  </signo>
+  <signo nome="Escorpião">
+    <descricao>Escorpião representa transformação, mistério e intensidade. Com uma forte energia emocional,
+    tende a tentar entender enigmas, mistérios e segredos do ser humano. Nesse sentido,Escorpião
+    em diferentes casas indica onde temos uma abordagem profunda e transformadora. 
+</descricao>
+  </signo>
+  <signo nome="Sagitário">
+    <descricao>O signo que mistura aventura, filosofia e liberdade é Sagitário. Além disso, 
+    é considerado o mais positivo, divertido e otimista do zodíaco. Porém, pode ter dificuldade em se comprometer. 
+    Em diferentes casas, promove expansão e busca por significado. 
+</descricao>
+  </signo>
+  <signo nome="Capricórnio">
+    <descricao>Capricórnio representa estrutura, ambição e responsabilidade. 
+    Prudência, paciência e persistência são as três grandes características de Capricórnio.
+    Nesse sentido, é o mais capaz de realizar coisas difíceis. 
+    Em diferentes casas, mostra nossa busca em construir e alcançar metas. 
+    </descricao>
+  </signo>
+  <signo nome="Aquário">
+    <descricao>Aquário é o signo da inovação, fraternidade e independência. Mas também é considerado o melhor amigo do zodíaco,
+    por ser um signo leal, honrado e que se pode realmente confiar. Onde temos Aquário no nosso Mapa mostra como buscamos mudanças
+    e ideais humanitários. 
+</descricao>
+  </signo>
+  <signo nome="Peixes">
+    <descricao>Símbolo da empatia, espiritualidade e fusão, Peixes é o último signo do zodíaco, representando o último estágio de aprendizado
+    da vida. No entanto, é capaz de se doar totalmente a algum objetivo e de esquecer seus próprios interesses. 
+    A Casa onde temos Peixe mostra uma abordagem intuitiva e compassiva.
+    </descricao>
+  </signo>
+</signos>

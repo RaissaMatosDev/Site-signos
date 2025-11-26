@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado - Seu Signo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content-box">
+            <header>
+                <h1>@SeuSigno</h1>
+            </header>
+            <main>
+                <section id="result-section">
+                    <h2 id="sign-name"></h2>
+                    <div id="sign-icon" class="icon"></div>
+                    <p id="sign-description"></p>
+                </section>
+                <button onclick="goBack()">Voltar</button>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Função para pegar o signo com base na data de nascimento
+        function getZodiacSign(date) {
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            
+            if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) return "Áries";
+            if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) return "Touro";
+            if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) return "Gêmeos";
+            if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) return "Câncer";
+            if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) return "Leão";
+            if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) return "Virgem";
+            if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) return "Libra";
+            if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) return "Escorpião";
+            if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) return "Sagitário";
+            if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) return "Capricórnio";
+            if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) return "Aquário";
+            if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) return "Peixes";
+        }
+
+        // carregar a descrição do signo a partir do XML
+        function loadDescription(zodiacSign) {
+            fetch('signos.xml')
+                .then(response => response.text())
+                .then(xmlText => {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+
+                    // Verificar o XML 
+                    if (xmlDoc.getElementsByTagName("parsererror").length) {
+                        console.error("Erro ao parsear XML.");
+                        document.getElementById('sign-description').textContent = "Erro ao carregar o arquivo XML.";
+                        return;
+                    }
+
+                    // Encontrar o signo 
+                    const signElement = xmlDoc.querySelector(`signo[nome="${zodiacSign}"]`);
+                    if (!signElement) {
+                        console.error(`Signo "${zodiacSign}" não encontrado no XML.`);
+                        document.getElementById('sign-description').textContent = "Descrição não encontrada.";
+                        return;
+                    }
+
+                    // Obter a descrição do signo
+                    const description = signElement.querySelector("descricao").textContent;
+
+                    // Atualizar a descrição do signo no HTML
+                    document.getElementById('sign-description').textContent = description;
+                })
+                .catch(error => {
+                    console.error("Erro ao carregar o arquivo XML:", error);
+                    document.getElementById('sign-description').textContent = "Erro ao carregar a descrição.";
+                });
+        }
+
+        // Função para exibir o signo e a descrição
+        function showSign() {
+            const birthdateInput = new Date(localStorage.getItem('birthdate'));
+            const zodiacSign = getZodiacSign(birthdateInput);
+
+            // Definir o nome do signo
+            document.getElementById('sign-name').textContent = `Seu signo é ${zodiacSign}`;
+
+            // Definir o ícone correspondente
+            const signIcons = {
+                "Áries": "♈",
+                "Touro": "♉",
+                "Gêmeos": "♊",
+                "Câncer": "♋",
+                "Leão": "♌",
+                "Virgem": "♍",
+                "Libra": "♎",
+                "Escorpião": "♏",
+                "Sagitário": "♐",
+                "Capricórnio": "♑",
+                "Aquário": "♒",
+                "Peixes": "♓"
+            };
+
+            document.getElementById('sign-icon').textContent = signIcons[zodiacSign];
+
+            // Carregar a descrição do signo
+            loadDescription(zodiacSign);
+        }
+
+        // Função para voltar à página anterior
+        function goBack() {
+            window.history.back();
+        }
+
+        // Executar a função showSign ao carregar a página
+        window.onload = showSign;
+    </script>
+</body>
+</html>

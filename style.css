@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('imgs2.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    color: #020203;
+    text-align: center; 
+    padding: 20px;
+    margin: 0;
+    height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+}
+
+header h1 {
+    margin-bottom: 20px;
+    color: #120707; 
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+input[type="date"], button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #8f2cf1;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8f2cf1;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+
+.content-box {
+    background-color: white; 
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px; /* Largura máxima da caixa */
+    margin-top: 20px;
+}
+
+
+.zodiac-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-top: 30px;
+}
+
+.icon {
+    font-size: 40px; /* Tamanho dos ícones */
+    cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+    transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.icon:hover {
+    transform: scale(1.2); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Para manter a responsividade da página */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px; /* Reduz o tamanho do título em telas menores */
+    }
+
+    input[type="date"], button {
+        width: 100%; /* Expande os botões e inputs para largura total */
+        font-size: 14px;
+    }
+
+    .content-box {
+        width: 90%; /* Ajusta a largura da caixa para 90% da tela */
+    }
+
+    .zodiac-icons {
+        flex-direction: column; /* Coloca os ícones na coluna em telas pequenas */
+    }
+}
